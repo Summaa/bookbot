@@ -2,8 +2,8 @@ def main():
     book_path = "books/frankenstein.txt"
     text = get_book_contents(book_path)
     word_count = get_word_count(text)
-    char_count = get_character_count(text)
-    print_report(book_path, word_count, char_count)
+    char_dict = get_character_dict(text)
+    print_report(book_path, word_count, char_dict)
     
 
 def get_book_contents(path):
@@ -17,7 +17,7 @@ def get_word_count(text):
         word_count += 1
     return word_count
 
-def get_character_count(text):
+def get_character_dict(text):
     char_dict = {}
     for char in text:
         lowered = char.lower()
